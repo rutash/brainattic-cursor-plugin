@@ -1,0 +1,22 @@
+{
+  "name": "brainattic",
+  "version": "1.0.0",
+  "description": "Connect Cursor agents to Brainattic, an EU-hosted knowledge base with governed search, versioned documents, and rule-aware editing via MCP.",
+  "author": {
+    "name": "Finite Software Systems Ltd.",
+    "email": "hello@brainattic.ai"
+  },
+  "homepage": "https://brainattic.ai",
+  "repository": "https://github.com/rutash/brainattic-cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "brainattic",
+    "mcp",
+    "knowledge-base",
+    "documentation",
+    "semantic-search",
+    "agent-workflows"
+  ],
+  "logo": "https://brainattic.ai/assets/icon-512.png",
+  "mcpServers": "mcp.json"
+}
