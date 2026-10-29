@@ -1,0 +1,19 @@
+{
+  "identifier": "brainattic-knowledge-base",
+  "name": "Brainattic — Knowledge Base for AI Agents",
+  "version": "1.0.0",
+  "author": "Finite Software Systems Ltd.",
+  "authorUrl": "https://brainattic.ai",
+  "homepage": "https://github.com/rutash/brainattic-cursor-plugin",
+  "cloudEndpoint": "https://app.brainattic.ai/api/mcp",
+  "description": "EU-hosted MCP knowledge base for AI agents: search and retrieve organizational documents, maintain versioned knowledge, and create or edit records within workspace permissions. Uses OAuth 2.1 with PKCE and dynamic client registration.",
+  "tags": [
+    "knowledge-base",
+    "remote-mcp",
+    "enterprise-search",
+    "document-management",
+    "oauth",
+    "versioned-knowledge",
+    "eu-hosted"
+  ]
+}

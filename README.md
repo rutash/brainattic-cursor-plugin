@@ -40,6 +40,23 @@ The Cursor Marketplace entry is subject to Cursor's manual review. Until approva
 - The connected server exposes both read and mutation tools; confirm intended workspace permissions and review proposed write actions before allowing them.
 - The public plugin manifest contains no API tokens, passwords, OAuth client secrets, or customer data.
 
+## LobeHub MCP Marketplace publisher manifest
+
+The `lhm.plugin.json` in this repository describes Brainattic's **official hosted MCP service** for the [LobeHub MCP Marketplace](https://lobehub.com/mcp). This repository is a public **integration/configuration wrapper**, not the proprietary server implementation. The LobeHub listing version is independent of the Cursor plugin and hosted server versions.
+
+Users connect to `https://app.brainattic.ai/api/mcp` over Streamable HTTP and authenticate using their own Brainattic account through OAuth 2.1 / PKCE / dynamic client registration. The marketplace manifest intentionally does **not** include tool schemas: the MCP tool surface is protected behind user authentication, and no verified anonymous capability snapshot is available.
+
+Publisher steps (Node.js 22+; run locally on a computer with a browser):
+
+```bash
+npx -y @lobehub/market-cli@latest login
+npx -y @lobehub/market-cli@latest github connect
+npx -y @lobehub/market-cli@latest plugin publish https://github.com/rutash/brainattic-cursor-plugin --dir .
+npx -y @lobehub/market-cli@latest plugin list --output json
+```
+
+The GitHub connection must authorize the `rutash` account that can push to this repository. Review the consent screen and grant no more access than you intend. Publishing is a separate explicit account-level action; the presence of this manifest **does not** mean that Brainattic is already listed on LobeHub. If a Brainattic listing was already imported, confirm its identifier and claim it rather than creating a duplicate. Before publishing, check the current [publisher instructions](https://lobehub.com/publish-mcp/skill.md).
+
 ## Version and license
 
 The plugin version `1.0.0` is independent of the hosted Brainattic MCP server version. The files in this repository are MIT-licensed (see `LICENSE`). The MIT license **does not apply to the hosted Brainattic service, its server source code, or other proprietary assets**.
